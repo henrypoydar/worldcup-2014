@@ -24,6 +24,10 @@ OptionParser.new do |opts|
     options[:day_delta] = 1
   end
 
+  opts.on( '-a', '--all', "Display information for all matches" ) do
+    options[:day_delta] = nil
+  end
+
   opts.on( '-h', '--help', 'Display this screen' ) do
     puts opts
     exit
@@ -31,5 +35,5 @@ OptionParser.new do |opts|
 
 end.parse!
 
-world_cup_results = WorldCup::Results.new(ARGV, options)
+world_cup_results = WorldCup::Results.new(options)
 world_cup_results.render
