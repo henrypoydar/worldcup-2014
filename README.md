@@ -5,7 +5,7 @@ Uses Soccer for Good API http://worldcup.sfg.io/. Inspired by https://github.com
 
 ## Installation
 
-    $ gem install worldcup
+    $ gem install worldcup-2014
 
 ## Usage
 
