@@ -4,7 +4,7 @@ module WorldCup
 
   class Results
 
-    def initialize
+    def initialize(*args, opts)
     end
 
     def render
