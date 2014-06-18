@@ -17,6 +17,8 @@ Uses Soccer for Good API http://worldcup.sfg.io/. Inspired by https://github.com
 
 ## Results
 
+![](screenshot.png)
+
 ## Contributing
 
 1. Fork it ( https://github.com/hpoydar/worldcup/fork )
