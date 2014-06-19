@@ -13,6 +13,7 @@ Uses Soccer for Good API http://worldcup.sfg.io/. Inspired by https://github.com
         -c, --today                      Display today's matches and current results (default)
         -y, --yesterday                  Display yesterday's results
         -t, --tomorrow                   Display information for tomorrow's matches
+        -a, --all                        Display information for all matches
         -h, --help                       Display this screen
 
 ## Results
