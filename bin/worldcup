@@ -43,8 +43,7 @@ end.parse!
 
 if options[:section] == 'g'
   world_cup_results = WorldCup::Groups.new(options)
-  world_cup_results.render
 else
   world_cup_results = WorldCup::Results.new(options)
-  world_cup_results.render
 end
+world_cup_results.render
