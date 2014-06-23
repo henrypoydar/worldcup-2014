@@ -75,13 +75,18 @@ module WorldCup
         ]
       end
       @table = Terminal::Table.new(
-        headings: ["#{group.first}",'Country','Points', 'Wins', 'Draws', 'Losses', 'Goals_for', 'Goals_Against'],
+        headings: ["#{group_header(group.first)}",'Country','Points', 'Wins', 'Draws', 'Losses', 'Goals_for', 'Goals_Against'],
         rows: rows)
       puts @table
     end
 
     def calculate_points(w,d)
       points = (3 * w) + (d)
+    end
+
+    def group_header(group_id)
+      letters = ('A'..'H').to_a
+      letters[group_id - 1]
     end
   end
 end
