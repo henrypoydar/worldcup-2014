@@ -11,6 +11,7 @@ OptionParser.new do |opts|
   opts.banner = "Usage: worldcup [options]"
 
   options[:day_delta] = 0
+  options[:section] = 'r'
 
   opts.on( '-c', '--today', "Display today's matches and current results (default)" ) do
     options[:day_delta] = 0
@@ -28,6 +29,11 @@ OptionParser.new do |opts|
     options[:day_delta] = nil
   end
 
+  opts.on( '-g', '--groups', "Display information for all groups" ) do
+    options[:day_delta] = nil
+    options[:section] = 'g'
+  end  
+
   opts.on( '-h', '--help', 'Display this screen' ) do
     puts opts
     exit
@@ -35,5 +41,9 @@ OptionParser.new do |opts|
 
 end.parse!
 
-world_cup_results = WorldCup::Results.new(options)
+if options[:section] == 'g'
+  world_cup_results = WorldCup::Groups.new(options)
+else
+  world_cup_results = WorldCup::Results.new(options)
+end
 world_cup_results.render
